@@ -13,6 +13,7 @@ var fight = function () {
   // Alert players that they are starting the round
   window.alert("Welcome to Robot Gladiators!");
 
+  ////Player attacks Enemy
   //Subtract the value of "playerAttack" from the value of "enemyHealth" and use
   //that result to update the value in the "enemyHealth" variable
   enemyHealth = enemyHealth - playerAttack;
@@ -29,6 +30,14 @@ var fight = function () {
       " health remaining."
   );
 
+  // Check enemy's heath
+  if (enemyHealth <= 0) {
+    window.alert(enemyName + " has died!");
+  } else {
+    window.alert(enemyName + " still has " + enemyHealth + " health left.");
+  }
+
+  //// Enemy attacks player
   // Subtract the value of "enemyAttack" from the value of "playerHealth" and
   //use that result to update the value in the "playerHealth" variable.
   playerHealth = playerHealth - enemyAttack;
@@ -44,6 +53,13 @@ var fight = function () {
       playerHealth +
       " health remaining."
   );
+
+  // Check player's health
+  if (playerHealth <= 0) {
+    window.alert(playerName + " has died!");
+  } else {
+    window.alert(playerName + " still has " + playerHealth + " health left.");
+  }
 };
 
 fight();
